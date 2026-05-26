@@ -1,4 +1,4 @@
-package strategy;
+package design_patterns;
 
 /***
  * Singleton Pattern ensures that a class has only one instance and provides a global access point to it.
