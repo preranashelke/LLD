@@ -4,5 +4,5 @@ public enum GameStatus {
     IN_PROGRESS,
     DRAW,
     WINNER_X,
-    WINNER_Y
+    WINNER_O
 }
