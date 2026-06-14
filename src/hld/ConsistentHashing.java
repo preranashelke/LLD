@@ -65,12 +65,12 @@ public class ConsistentHashing {
         List<String> servers = Arrays.asList("S0","S2","S1");
         ConsistentHashing ch = new ConsistentHashing(10, servers);
 
-//        for (Map.Entry<Long, String> e : ch.ring.entrySet()) {
-//            System.out.println(e.getKey() + " -> " + e.getValue());
-//        }
-//
-//        System.out.println("UserA hash = " + ch.hash("UserA"));
-//        System.out.println("UserB hash = " + ch.hash("UserB"));
+        for (Map.Entry<Long, String> e : ch.ring.entrySet()) {
+            System.out.println(e.getKey() + " -> " + e.getValue());
+        }
+
+        System.out.println("UserA hash = " + ch.hash("UserA"));
+        System.out.println("UserB hash = " + ch.hash("UserB"));
 
         System.out.println("UserA is assign to " + ch.getServer("UserA"));
         System.out.println("UserB is assign to " + ch.getServer("UserB"));
