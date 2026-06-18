@@ -141,7 +141,19 @@ public class examples {
                 .flatMap(Collection::stream)
                 .toList();
         System.out.println(flat);
-
-
     }
+
+    /***
+     * create a map where Key = length of the string
+     * Value = list of strings having that length
+     */
+
+    List<String> wordsList = List.of( "apple", "banana", "cherry", "date", "fig", "grapefruit", "kiwi" );
+
+    Map<Integer, List<String>> result =
+            wordsList.stream()
+                    .collect(Collectors.groupingBy(
+                            String::length,
+                            Collectors.toList()
+                    ));
 }
